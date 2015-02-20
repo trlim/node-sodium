@@ -8,8 +8,19 @@
                   'sources': [
                         'sodium.cc',
                   ],
-                  "dependencies": [
-                        "<(module_root_dir)/deps/libsodium.gyp:libsodium"
+                  'conditions': [
+                        [ 'OS=="win"', {
+                              'defines': [
+                                    'SODIUM_STATIC'
+                              ],
+                              "dependencies": [
+                                    "<(module_root_dir)/deps/libsodium-msvs.gyp:libsodium"
+                              ],
+                        }, {
+                              "dependencies": [
+                                    "<(module_root_dir)/deps/libsodium.gyp:libsodium"
+                              ],
+                        }]
                   ],
                   'include_dirs': [
                        './deps/libsodium/src/libsodium/include',
