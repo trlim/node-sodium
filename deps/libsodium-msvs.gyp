@@ -92,7 +92,6 @@
             ],
             'conditions': [
               [ 'OS=="win"', {
-                'type': 'static_library',
                 'defines': [
                   'inline=__inline'
                 ]
