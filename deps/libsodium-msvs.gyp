@@ -30,7 +30,6 @@
 				'HAVE_PMMINTRIN_H=1',
 				'HAVE_TMMINTRIN_H=1',
 				'NATIVE_LITTLE_ENDIAN=1',
-				'HAVE_TI_MODE=1',
 				'HAVE_WEAK_SYMBOLS=1',
 				'HAVE_MPROTECT=1',
 
@@ -96,9 +95,6 @@
                 'type': 'static_library',
                 'defines': [
                   'inline=__inline'
-                ],
-                '!defines': [
-                  'HAVE_TI_MODE'
                 ]
               }]
             ],
@@ -221,6 +217,21 @@
                 'libsodium/src/libsodium/sodium/version.c',
                 'libsodium/src/libsodium/crypto_scalarmult/curve25519/donna_c64/base_curve25519_donna_c64.c',
                 'libsodium/src/libsodium/crypto_scalarmult/curve25519/donna_c64/smult_curve25519_donna_c64.c',
+                'libsodium/src/libsodium/crypto_scalarmult/curve25519/ref10/base_curve25519_ref10.c',
+                'libsodium/src/libsodium/crypto_scalarmult/curve25519/ref10/fe_0_curve25519_ref10.c',
+                'libsodium/src/libsodium/crypto_scalarmult/curve25519/ref10/fe_1_curve25519_ref10.c',
+                'libsodium/src/libsodium/crypto_scalarmult/curve25519/ref10/fe_add_curve25519_ref10.c',
+                'libsodium/src/libsodium/crypto_scalarmult/curve25519/ref10/fe_copy_curve25519_ref10.c',
+                'libsodium/src/libsodium/crypto_scalarmult/curve25519/ref10/fe_cswap_curve25519_ref10.c',
+                'libsodium/src/libsodium/crypto_scalarmult/curve25519/ref10/fe_frombytes_curve25519_ref10.c',
+                'libsodium/src/libsodium/crypto_scalarmult/curve25519/ref10/fe_invert_curve25519_ref10.c',
+                'libsodium/src/libsodium/crypto_scalarmult/curve25519/ref10/fe_mul121666_curve25519_ref10.c',
+                'libsodium/src/libsodium/crypto_scalarmult/curve25519/ref10/fe_mul_curve25519_ref10.c',
+                'libsodium/src/libsodium/crypto_scalarmult/curve25519/ref10/fe_sq_curve25519_ref10.c',
+                'libsodium/src/libsodium/crypto_scalarmult/curve25519/ref10/fe_sub_curve25519_ref10.c',
+                'libsodium/src/libsodium/crypto_scalarmult/curve25519/ref10/fe_tobytes_curve25519_ref10.c',
+                'libsodium/src/libsodium/crypto_scalarmult/curve25519/ref10/scalarmult_curve25519_ref10.c',
+                'libsodium/src/libsodium/crypto_scalarmult/curve25519/scalarmult_curve25519_api.c',
                 'libsodium/src/libsodium/crypto_stream/salsa20/amd64_xmm6/stream_salsa20_amd64_xmm6.S',
                 'libsodium/src/libsodium/crypto_core/salsa2012/ref/core_salsa2012.c',
                 'libsodium/src/libsodium/crypto_core/salsa2012/core_salsa2012_api.c',
